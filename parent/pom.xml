@@ -177,6 +177,8 @@
 		<!-- discovery.tpc.version usually is usually set to ${tpc.version} but it
 		can happen that they need to have different values, hence 2 properties -->
 		<discovery.tpc.version>${TARGET_PLATFORM_CENTRAL_MAX}</discovery.tpc.version>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
 	</properties>
 
 	<build>
@@ -1201,6 +1203,20 @@ hs_err_pid*.log</jgit.ignore>
 				<enabled>true</enabled>
 			</releases>
 		</repository>
+<repository>
+            <id>reddeer</id>
+            <name>reddeer</name>
+            <url>http://download.eclipse.org/reddeer/milestones/2.0.0.Beta/</url>
+            <layout>p2</layout>
+        </repository>
+
+<repository>
+            <id>orbit</id>
+            <url>http://download.eclipse.org/tools/orbit/R-builds/R20170516192513/repository/</url>
+            <layout>p2</layout>
+        </repository>
+
+
 	</repositories>
 
 	<!-- Additional m2 repos to resolve things like org.eclipse.tycho:tycho-maven-plugin -->
